@@ -1,0 +1,10 @@
+---
+
+const { tire } = Astro.props
+---
+  <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+    <a href={tire.image} target="_blank" data-lightbox="image-1" data-title="Descripción opcional">
+        <img src={tire.image} alt={tire.name}  class="w-full h-full object-cover rounded-md scale-100 hover:scale-105 duration-100 cursor-pointer"/>
+    </a>
+  </div>
+

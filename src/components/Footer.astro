@@ -1,0 +1,23 @@
+---
+import logo from '../assets/img/aufine_logo.png'
+import logo2 from '../assets/img/logoServi.png'
+import { Image } from 'astro:assets'
+const currentYear = new Date().getFullYear()
+---
+
+
+<footer class="bg-gray-800">
+  <section id="Contacto" class="py-8">
+    <div class="container flex justify-between items-center">
+      <!-- Año actual -->
+      <p class="text-white" style="font-family:PANTHON">&copy; {currentYear} DERECHOS RESERVADOS</p>
+      <!-- Logos de la empresa -->
+      <div class="flex items-center justify-center">
+    
+        <div>
+          <Image src={logo2} alt="Your Logo" width="300" height="100" />
+        </div>
+      </div>
+    </div>
+  </section>
+</footer>

@@ -1,0 +1,32 @@
+$colors: (
+  primary: (
+    100: hsl(206, 100%, 79%),    // Azul claro
+    200: hsl(206, 79%, 69%),     // Azul medio claro
+    300: hsl(206, 53%, 49%),     // Azul medio
+    400: hsl(206, 64%, 48%),     // Azul medio oscuro
+    500: hsl(206, 96%, 20%),     // Azul oscuro
+  ),
+  secondary: (
+    100: hsl(206, 81%, 68%),     // Azul claro
+    200: hsl(206, 80%, 63%),     // Azul medio claro
+    300: hsl(206, 72%, 57%),     // Azul medio
+    400: hsl(206, 75%, 47%),     // Azul medio oscuro
+    500: hsl(206, 90%, 30%),     // Azul oscuro
+  ),
+  neutral: (
+    // Mantén los tonos neutrales sin cambios
+    100: hsl(0 0% 100%),
+    200: hsl(200 23% 97%),
+    300: hsl(200 12% 95%),
+    400: hsl(205 12% 88%),
+    500: hsl(209 13% 83%),
+    600: hsl(208 6% 55%),
+    700: hsl(210 8% 31%),
+    800: hsl(212 9% 22%),
+    900: hsl(210 10% 14%),
+  ),
+  dark: (
+    // Mantén los tonos oscuros sin cambios
+    100: hsl(240, 4%, 9%),
+  ),
+);

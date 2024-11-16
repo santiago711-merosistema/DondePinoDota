@@ -1,0 +1,122 @@
+---
+import { Icon } from 'astro-icon/components'
+
+const { performanceDays="" ,tyreImage="", tyreName = 'mdi:rocket', title = 'Title', segment = 'Segment' ,type= "" ,utility= "" ,vehicle="" ,truckImage="" ,tyreType="" ,tyreDimention="", performanceKilometers=""} = Astro.props
+---
+
+<div class="p-4 grid grid-cols-1 md:grid-cols-3 gap-4">
+  <!-- Tarjeta 1 -->
+  <div class="rounded-lg shadow-md  p-4 flex flex-col items-center text-black hover:shadow-2xl transition duration-300 ease-in-out">
+    <img src={truckImage} alt="Imagen de la llanta" class="mb-2 w-52 h-52 rounded-lg border-2  shadow-md">
+    <h3 class="text-sm font-bold mb-1 text-center text-blue-500" style="font-family: PANTHON;">EVALUACIÓN DE PRODUCTO FINALIZADO</h3>
+    <p class="font-bold mb-1" style="font-family: PANTHON;"> {tyreName}</p>
+    <div class=" text-sm">
+      <p><strong style="font-family: PANTHON;">SEGMENTO:</strong> {segment}</p>
+      <p><strong style="font-family: PANTHON;">TIPO DE VÍA:</strong> {type}</p>
+      <p><strong style="font-family: PANTHON;">UTILIZACIÓN:</strong> {utility}</p>
+      <p><strong style="font-family: PANTHON;">VEHÍCULO:</strong> {vehicle}</p>
+    </div>
+  </div>
+  
+  <!-- Tarjeta 2 -->
+  <div class="rounded-lg shadow-md  p-4 flex flex-col items-center text-black hover:shadow-2xl transition duration-300 ease-in-out">
+    <div class="horizontal-section mb-2">
+      <div class="testimonial-image">
+        <img src={tyreImage} alt="Imagen de la llanta" class=" rounded-lg w-52 shadow-md">
+      </div>
+    </div>
+    <h3 style="font-family: PANTHON;" class="text-sm font-bold mb-1 mt-1 text-center text-blue-500">{tyreType}</h3>
+    <p style="font-family: PANTHON;" class="text-xs text-center font-bold">{tyreDimention}</p>
+    <!-- Gráficos de rendimiento -->
+    <div class="horizontal-section mt-2">
+      <!-- Gráfico de rendimiento final -->
+      <div style="font-family: PANTHON;" class="w-full mb-2">
+        <h4 class="text-xs font-bold mb-1">Rendimiento Final</h4>
+        <div class="bg-blue-500 rounded-full">
+          <div class="bg-blue-300 rounded-full text-xs leading-none py-1 text-center text-white" style="width: 70%;">{performanceKilometers}</div>
+        </div>
+      </div>
+      <!-- Gráfico de días transcurridos -->
+      <div class="w-full" style="font-family: PANTHON;">
+        <h4 class="text-xs font-bold mb-1">Días recorridos</h4>
+        <div class="bg-green-500 rounded-full">
+          <div class="bg-green-300 rounded-lg text-xs leading-none py-1 text-center text-white" style="width: 60%;">{performanceDays}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tarjeta 3 -->
+  <div class="rounded-lg shadow-md  p-4 flex flex-col items-center text-black hover:shadow-2xl transition duration-300 ease-in-out" style="font-family:PANTHON">
+    <p class="text-sm font-bold mb-1 text-center text-blue-500"><strong>OBSERVACIONES:</strong></p>
+    <ul class="list-disc ml-4 text-xxs">
+      <li class="mb-1">Transporte de productos Noel desde la ciudad de Medellín hacia Cartagena y Santa Marta, Cali, Bogotá y viceversa.</li>
+      <li class="mb-1">Siempre realiza los recorridos cargado.</li>
+      <li class="mb-1">Tendido completo.</li>
+    </ul>
+  </div>
+</div>
+
+
+<style lang="scss">
+ .testimonial {
+  display: flex;
+  justify-content: space-between; 
+  background-color: #f5f5f5; /* Color de fondo */
+  border: 2px solid #4a4a4a; /* Color del borde */
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  position: relative;
+  z-index: 2;
+  
+
+}
+.evaluation {
+  color:black
+}
+.evaluation, .testimonial-details {
+  flex-basis: 30%; /* Establece el ancho inicial de cada columna */
+}
+
+.testimonial-image {
+  flex-basis: 20%; /* Ancho de la columna de la imagen */
+}
+.avatar {
+  margin-bottom: 1rem;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #007bff; /* Color del borde del avatar */
+  border-radius: 50%;
+}
+
+.avatar .astro-icon {
+  color: #007bff; /* Color del ícono */
+  width: 2rem;
+  height: 2rem;
+}
+
+.content h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.content p {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+
+
+.darkmode .testimonial {
+  background-color: #343a40; /* Color de fondo en modo oscuro */
+  border-color: #343a40; /* Color del borde en modo oscuro */
+}
+
+.darkmode .testimonial::before {
+  background-color: #212529; /* Color del fondo en modo oscuro */
+}
+
+</style>

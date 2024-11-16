@@ -1,0 +1,112 @@
+---
+
+
+
+---
+
+<section class="hero relative py-20" >
+  <div class="container">
+    <div class="grid grid-cols-1 items-center lg:grid-cols-2">
+      <div class="flex flex-col items-center gap-8">
+        <h1 class="text-center text-6xl lg:text-8xl Title">
+          <slot><span class="text-white text-gradient">LO MEJOR PARA TU CAMIÓN</span></slot>
+        </h1>
+      </div>
+      <div class="flex flex-col gap-6 lg:flex-row">
+        <div class="Card flex-grow flex flex-col bg-white rounded-lg shadow-lg overflow-hidden">
+          <div class="flex-shrink-0 relative">
+            <!-- Imagen de la llanta para ENERGY -->
+            <img src="./energyfondo.jpg" alt="Llanta ENERGY" class="CardImage w-full h-full object-cover rounded-lg">
+            <!-- Filtro de efecto de vidrio -->
+            <div class="absolute inset-0 bg-black opacity-10 rounded-lg"></div>
+          </div>
+          <div class="flex-grow flex flex-col justify-between p-6">
+            <div>
+              <!-- Título de la categoría ENERGY -->
+              <h3 class="text-2xl font-semibold text-blue-600 text-gradient">ENERGY</h3>
+              <!-- Descripción de la categoría ENERGY -->
+              <p class="mt-2 text-gray-600">Descubre nuestra línea de llantas ENERGY diseñadas para un rendimiento óptimo.</p>
+            </div>
+            <!-- Botón para la categoría ENERGY -->
+            <a href="/catalogo/#llantasEnergy" class="mt-4 inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded text-center" style="color:white; text-decoration:none;">Ver más</a>
+          </div>
+        </div>
+        <div class="Card flex-grow flex flex-col bg-white rounded-lg shadow-lg overflow-hidden">
+          <div class="flex-shrink-0 relative">
+            <!-- Imagen de la llanta para SMART -->
+            <img src="./smartfondo.jpg" alt="Llanta SMART" class="w-full h-full object-cover rounded-lg">
+            <!-- Filtro de efecto de vidrio -->
+            <div class="absolute inset-0 bg-black opacity-10 rounded-lg"></div>
+          </div>
+          <div class="flex-grow flex flex-col justify-between p-6">
+            <div>
+              <!-- Título de la categoría SMART -->
+              <h3 class="text-2xl font-semibold text-blue-600 text-gradient">SMART</h3>
+              <!-- Descripción de la categoría SMART -->
+              <p class="mt-2 text-gray-600">Descubre nuestra línea de llantas SMART la mejor tecnologia para un gran desempeño.</p>
+            </div>
+            <!-- Botón para la categoría SMART -->
+            <a href="/catalogo/#llantasSmart" class="CardImage mt-4 inline-block bg-blue-500 font-bold py-2 px-4 rounded text-center" style="color:white; text-decoration:none;">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<style lang="scss">
+.hero {
+  position: relative;
+  z-index: 1; /* Ensure this element is above the pseudo-element */
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/AUFINEE.png');
+  background-size: cover;
+  background-attachment: fixed;
+
+  z-index: -1; 
+}
+  .text-gradient {
+    font-family: 'PANTHON';
+  }
+  @media  screen and (max-width:500px) {
+.Title{
+  font-size: 3rem;
+}
+
+.Card {
+  width: 50%;
+  margin-top: 10px;
+  margin-left: 80px;
+
+  
+
+}
+    
+  }
+  @media  screen and (min-width: 768px) and (max-width:1000px) {
+    .Title{
+      font-size: 40px;
+      text-align: center;
+    }
+    .Card{
+      width: 50%;
+      margin-top: 10px;
+  margin-left: 230px;
+    }
+  }
+  :global(.darkmode .text-gradient) {
+    background: linear-gradient(315deg, var(--primary-200) 25%, var(--secondary-400));
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
